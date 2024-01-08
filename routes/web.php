@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ComicController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,6 +20,8 @@ Route::get('/', function () {
     // dd($products);
     return view('home');
 })->name('home');
+
+Route::resource('comics', ComicController::class);
 
 Route::get('/products/{id}', function ($id) {
     $products = config('db.comics');
