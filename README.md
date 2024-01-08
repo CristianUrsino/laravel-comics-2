@@ -7,6 +7,19 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# TRACCIA
+Milestone 1
+Tramite gli appositi comandi artisan create un model con relativa migration e seeder e resource controller.
+Editate la resource route
+Milestone 2
+Iniziate a definire le prime operazioni CRUD con le relative view dove necessarie:
+- index()
+- show()
+- create()
+- store() (solo dump dei dati)
+Bonus:
+Procedere con il salvataggio dei dati sul db
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
