@@ -7,7 +7,7 @@
     <div class="row my-3">
         @foreach ($products as $key => $product)
             <div class="col-12 col-md-4 col-lg-3">
-                <a href="{{route('products.show', $key)}}">
+                <a href="{{route('comics.show', $key)}}">
                     <div class="card">
                         <img src="{{$product['thumb']}}" alt="img product">
                     </div>
