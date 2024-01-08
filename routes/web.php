@@ -21,15 +21,16 @@ Route::get('/', function () {
     return view('home');
 })->name('home');
 
-Route::resource('comics', ComicController::class);
-
-Route::get('/products/{id}', function ($id) {
+Route::get('/comics/{id}', function ($id) {
     $products = config('db.comics');
 
     if ($id >= 0 && $id < count($products)) {
         $product = $products[$id];
-         return view('products.show', compact('product'));
+         return view('comics.show', compact('product'));
     } else {
         abort(404);
     }
-})->name('products.show');
+})->name('comics.show');
+
+Route::resource('comics', ComicController::class);
+
