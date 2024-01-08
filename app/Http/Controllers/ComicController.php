@@ -14,18 +14,17 @@ class ComicController extends Controller
      */
     public function index()
     {
-        $products = Comic::all();
+        $products = Comic::all(); 
         return view('comics.index', compact('products'));
     }
 
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('comics.create');
     }
 
     /**
@@ -36,7 +35,15 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+        $newComic = new Comic();
+        $newComic->title = $formData['title'];
+        $newComic->price = $formData["price"];
+        $newComic->sale_date = $formData["sale_date"];
+        $newComic->series = $formData["series"];
+        $newComic->type = $formData["type"];
+        $newComic->save();
+        return to_route('comics.index');
     }
 
     /**

@@ -5,4 +5,7 @@
     <li class="nav-item">
         <a class="nav-link" href="{{ route('comics.index') }}">products</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('comics.create') }}">add products</a>
+    </li>
 </ul>
