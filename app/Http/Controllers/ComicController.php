@@ -79,13 +79,16 @@ class ComicController extends Controller
     {
         {
             $formData = $request->all();
-            $comic->title = $formData['title'];
-            $comic->price = $formData["price"];
-            $comic->sale_date = $formData["sale_date"];
-            $comic->series = $formData["series"];
-            $comic->type = $formData["type"];
-            $comic->update();
-            return to_route('comics.show', $comic);
+
+            $request->validate([
+                'title' => 'required|min:5|max:10',
+            ]);
+    
+            $newComic = new Comic();
+            $newComic->fill($formData);
+            $newComic->save();
+    
+            return to_route('comics.index');
         }
     }
 
