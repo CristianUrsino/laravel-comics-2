@@ -4,6 +4,11 @@
 @section('content')
 <div class="my-3">
     <h2>products</h2>
+    @if(session()->has('message'))
+        <div style="background-color: rgb(221, 69, 69)">
+            {{session('message')}}
+        </div>
+    @endif
     <div class="row my-3">
         @foreach ($products as $key => $product)
             <div class="col-12 col-md-4 col-lg-3">
