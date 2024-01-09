@@ -12,6 +12,11 @@
                         <img style="width: 100%" src="{{$product['thumb']}}" alt="img product">
                     <a href="{{route('comics.edit', $product)}}">cambia</a>
                     </a>
+                    <form action="{{route('comics.destroy', $product)}}" method="POST">
+                    @csrf
+                    @method('DELETE')
+                    <button type="submit">rimuovi</button>
+                    </form>
                 </div>
                 
             </div>
