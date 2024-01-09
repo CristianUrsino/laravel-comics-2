@@ -7,9 +7,10 @@
     <div class="row my-3">
         <div class="col-6">
             <div class="card">
-                <img src="{{$product['thumb']}}" alt="img product">
+                <img src="{{$comic['thumb']}}" alt="img product">
             </div>
         </div>
+        <div>{{$comic['title']}}</div>
     </div>
 </div>
 @endsection
