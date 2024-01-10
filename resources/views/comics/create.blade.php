@@ -20,29 +20,42 @@
             
             @csrf
 
-            <input class="form-controll" type="text" id="title" name="title" placeholder="inserisci titolo">
-            @error('title')
-                <span style="background-color: rgb(221, 69, 69)">
-                    {{$message}}
-                </span>
-            @enderror
+            <div>
+                <input class="form-controll" type="text" id="title" name="title" placeholder="inserisci titolo">
+                @error('title')
+                    <span style="background-color: rgb(221, 69, 69)">
+                        {{$message}}
+                    </span>
+                @enderror
+            </div>
 
-            <input class="form-controll" type="text" id="price" name="price" placeholder="inserisci titolo">
-            @error('title')
-                <span style="background-color: rgb(221, 69, 69)">
-                    {{$message}}
-                </span>
-            @enderror
-            <input class="form-controll" type="date" id="sale_date" name="sale_date" placeholder="inserisci titolo">
-            <input class="form-controll" type="text" id="series" name="series" placeholder="inserisci titolo">
-            @error('title')
-                <span style="background-color: rgb(221, 69, 69)">
-                    {{$message}}
-                </span>
-            @enderror
-            <input class="form-controll" type="text" id="type" name="type" placeholder="inserisci titolo">
+            <div>
+                <input class="form-controll" type="text" id="price" name="price" placeholder="inserisci titolo">
+                @error('price')
+                    <span style="background-color: rgb(221, 69, 69)">
+                        {{$message}}
+                    </span>
+                @enderror
+            </div>
 
-            <button>invia</button>
+            <div>
+                <input class="form-controll" type="date" id="sale_date" name="sale_date" placeholder="inserisci titolo">
+            </div>
+
+            <div>
+                <input class="form-controll" type="text" id="series" name="series" placeholder="inserisci titolo">
+                @error('series')
+                    <span style="background-color: rgb(221, 69, 69)">
+                        {{$message}}
+                    </span>
+                @enderror
+            </div>
+            
+            <div>
+                <input class="form-controll" type="text" id="type" name="type" placeholder="inserisci titolo">
+            </div>
+            
+            <div><button>invia</button></div>
 
         </form>
     </div>
