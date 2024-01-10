@@ -20,7 +20,7 @@
                     <form action="{{route('comics.destroy', $product)}}" method="POST">
                     @csrf
                     @method('DELETE')
-                    <button type="submit">rimuovi</button>
+                    <button type="submit" class="cancel-button" data-item-title="{{$comic->title}}">rimuovi</button>
                     </form>
                 </div>
                 
@@ -28,4 +28,5 @@
         @endforeach
     </div>
 </div>
+@include('partials.modal_delete');
 @endsection
