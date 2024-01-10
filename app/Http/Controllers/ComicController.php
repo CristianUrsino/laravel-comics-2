@@ -16,9 +16,18 @@ class ComicController extends Controller
      * Display a listing of the resource.
      * 
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Comic::all(); 
+        // dd($request->query());
+        if(!empty($request->query('search')))
+        {
+            $search= $request->query('search');
+            $products = Comic::where('type', $search)->get();
+        }
+        else
+        {
+            $products = Comic::all(); 
+        }
         return view('comics.index', compact('products'));
     }
 
